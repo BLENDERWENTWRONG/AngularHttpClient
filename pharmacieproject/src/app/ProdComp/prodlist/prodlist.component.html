@@ -1,0 +1,26 @@
+<div class="container-md">
+  <h3>Liste des Produits</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Prix Produit</th>
+      <th>Prix Livraison</th>
+      <th>Date de creation</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let prod of prods">
+      <td>{{prod.libprod}}</td>
+      <td>{{prod.descriprod}}</td>
+      <td>{{prod.prixprod}}</td>
+      <td>{{prod.prixliv}}</td>
+      <td>{{prod.dateprod}}</td>
+      <button type="submit"  class="btn btn-info">Delete this product</button>
+      <button type="submit"  class="btn btn-danger">Update this product</button>
+    </tr>
+    </tbody>
+  </table>
+</div>
