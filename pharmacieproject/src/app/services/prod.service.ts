@@ -7,20 +7,27 @@ import {Prod} from "../models/prod";
   providedIn: 'root'
 })
 export class ProdService {
-  private baseURL = "http://127.0.0.1:8080/produits/"
+  private baseURL = "http://localhost:8083/produits/"
+
   constructor(private httpClient: HttpClient) {
   }
-  getProdList(): Observable<Prod[]>{
-    return this.httpClient.get<Prod[]>(`${this.baseURL+'getAllProd'}`);
-  }
-  // addFour(): Observable<Four>{
-  //   return this.httpClient.post<Four>(`${this.baseURL+'ajouterFou'}`);
-  // }
-  modFour(): Observable<Prod>{
-    return this.httpClient.get<Prod>(`${this.baseURL+'modif/'}`);
-  }
-  // delFour():Observable<Four>{
-  //   return this.httpClient.
-  // }
 
+  getProdList(): Observable<Prod[]> {
+    return this.httpClient.get<Prod[]>(`${this.baseURL + 'getAllProd'}`);
+  }
+
+  addProd(prod: Prod): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL + 'ajouterProduit'}`, prod);
+  }
+
+  getProd(id: number): Observable<Prod> {
+    return this.httpClient.get<Prod>(`${this.baseURL}/${id}`)
+  }
+
+  delProd(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL + 'sup'}/${id}`)
+  }
+  modProd(id: number, prod: Prod): Observable<Prod>{
+    return this.httpClient.put<Prod>(`${this.baseURL + 'modif'}/${id}`, prod)
+  }
 }

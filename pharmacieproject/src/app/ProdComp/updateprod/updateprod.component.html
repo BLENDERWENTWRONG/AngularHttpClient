@@ -1,0 +1,29 @@
+<div class="container-sm">
+  <h3 align="center" s>Ajouter un produit</h3>
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label> Name </label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="prod.libprod" name="Name">
+    </div>
+    <div class="form-group">
+      <label> Description </label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="prod.descriprod" name="Description">
+    </div>
+    <div class="form-group">
+      <label> Prix de produit </label>
+      <input type="float" class="form-control" id="prixprod" [(ngModel)]="prod.prixprod" name="PrixProduit">
+    </div>
+    <div class="form-group">
+      <label> Prix de livraison </label>
+      <input type="float" class="form-control" id="prixliv" [(ngModel)]="prod.prixliv" name="PrixLivraison">
+    </div>
+
+    <div class="form-group">
+      <label> Date de creation </label>
+      <input type="Date" class="form-control" id="phone" [(ngModel)]="prod.dateprod" name="Phone">
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit"> Mettre a jour </button>
+  </form>
+</div>

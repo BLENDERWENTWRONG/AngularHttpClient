@@ -1,0 +1,32 @@
+<div class="container-xm">
+  <h3> List Laboratoires</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID Laboratoire</th>
+      <th>Nom Laboratoires</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let lab of labs">
+      <td>{{lab.id}}</td>
+      <td>{{lab.lib}}</td>
+      <button type="submit"  class="btn btn-info" (click)="updatelab(lab.id)">Update this lab</button>
+      <button type="submit"  class="btn btn-danger" (click)="delLab(lab.id)">Delete this Lab</button>
+    </tr>
+    </tbody>
+
+
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+</div>

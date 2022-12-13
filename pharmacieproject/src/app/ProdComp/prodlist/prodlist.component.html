@@ -18,7 +18,7 @@
       <td>{{prod.prixprod}}</td>
       <td>{{prod.prixliv}}</td>
       <td>{{prod.dateprod}}</td>
-      <button type="submit"  class="btn btn-info">Delete this product</button>
+      <button type="submit" (click)="deleteprod(prod.id)"  class="btn btn-info">Delete this product</button>
       <button type="submit"  class="btn btn-danger">Update this product</button>
     </tr>
     </tbody>

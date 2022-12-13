@@ -16,8 +16,8 @@
     <td>{{four.email}}</td>
     <td>{{four.phone}}</td>
     <td>{{four.address}}</td>
-    <button type="submit"  class="btn btn-info">Update this Fournisseur</button>
-    <button type="submit"  class="btn btn-danger">Delete this Fournisseur</button>
+    <button type="submit"  class="btn btn-info" (click)="updatefour(four.id)">Update this Fournisseur</button>
+    <button type="submit"  class="btn btn-danger" (click)="deletefour(four.id)">Delete this Fournisseur</button>
   </tr>
   </tbody>
 </table>

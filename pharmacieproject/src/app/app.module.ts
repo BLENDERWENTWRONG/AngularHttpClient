@@ -7,6 +7,13 @@ import { AddfourComponent } from './FourComp/addfour/addfour.component';
 import { UpdatefourComponent } from './FourComp/updatefour/updatefour.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { ProdlistComponent } from './ProdComp/prodlist/prodlist.component';
+import {FormsModule} from "@angular/forms";
+import { AddprodComponent } from './ProdComp/addprod/addprod.component';
+import { UpdateprodComponent } from './ProdComp/updateprod/updateprod.component';
+import { LogincompComponent } from './logincomp/logincomp.component';
+import { AddLaboComponent } from './laboComp/add-labo/add-labo.component';
+import { ListLaboComponent } from './laboComp/list-labo/list-labo.component';
+import { UpdateLaboComponent } from './laboComp/update-labo/update-labo.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +21,19 @@ import { ProdlistComponent } from './ProdComp/prodlist/prodlist.component';
     FourlistComponent,
     AddfourComponent,
     UpdatefourComponent,
-    ProdlistComponent
+    ProdlistComponent,
+    AddprodComponent,
+    UpdateprodComponent,
+    LogincompComponent,
+    AddLaboComponent,
+    ListLaboComponent,
+    UpdateLaboComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
